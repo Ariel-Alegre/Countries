@@ -1,0 +1,29 @@
+.countryActivitiesList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+.countryActivitiesDetail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-shrink: 0;
+    width: 20%;
+    height: 50%;
+    border-radius: 15px;
+    margin:1% 0 5% 0;
+    color: blanchedalmond;
+    background: rgba(17, 12, 12, 0.49);
+    box-shadow: 0px 0px 8px 2px rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}
+.imgFlag{
+    height: 300px;
+}

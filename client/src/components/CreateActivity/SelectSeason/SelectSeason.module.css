@@ -1,0 +1,11 @@
+.activitySeason {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-shrink: 0;
+  height: 90%;
+  width: 21%;
+  border-radius: 15px;
+  margin: 1% 0 5% 0;
+
+}
