@@ -14,6 +14,7 @@
  border-radius: 20px;
  border: none;
  margin-top: -20px;
+ cursor: pointer;
 }
 .homeBox  {
 display: block;

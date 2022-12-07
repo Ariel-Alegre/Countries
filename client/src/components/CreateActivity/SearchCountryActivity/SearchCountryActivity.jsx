@@ -37,6 +37,7 @@ function SearchCountryActivity({ handleSelectCountries }) {
                 <img
                   src={element.imgflag}
                   alt="Img not found"
+                  className={styles.imgflag}
                 />{" "}
                 {element.name}
               </button>
