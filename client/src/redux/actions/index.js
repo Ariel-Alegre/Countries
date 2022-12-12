@@ -1,5 +1,4 @@
 import axios from "axios";
-
 export const GETALLCOUNTRIES = "GET_ALL_COUNTRIES";
 export const POSTACTIVITY = "POST_ACTIVITY";
 export const GETCOUNTRYDETAIL= "GET_COUNTRY_DETAIL";
@@ -10,11 +9,11 @@ export const FILTER_CONTINENT = "FILTER_CONTINENT";
 
 
 
-
+const { REACT_APP_BACK_SERVER } = process.env
 export function getByName(name){
   return async function(dispatch){
       try {
-          const json = await axios.get('http://localhost:3001/countries?name=' + name);
+          const json = await axios.get(`${REACT_APP_BACK_SERVER}/countries?name=` + name);
           return dispatch({
               type: 'GET_BY_NAME',
               payload: json.data
@@ -26,7 +25,7 @@ export function getByName(name){
 };
 export const getCountries = () => {        
   return async (dispatch) => { 
-    let allCountries = await axios.get("http://localhost:3001/countries"); 
+    let allCountries = await axios.get(`${REACT_APP_BACK_SERVER}/countries`); 
     return dispatch({                          
       type: GETALLCOUNTRIES,
       payload: allCountries.data,
@@ -37,7 +36,7 @@ export const getCountries = () => {
 export const postActivity = (payload) => { 
   return async (dispatch) => {
     const response = await axios.post( 
-      "http://localhost:3001/activity", payload
+      `${REACT_APP_BACK_SERVER}/activity", payload`
     );
     return response.data;  
   };
@@ -46,7 +45,7 @@ export const postActivity = (payload) => {
 export const getCountryDetail = (id) => {  
   return async (dispatch) => {   
     const response = await axios.get(       
-      `http://localhost:3001/countries/${id}`
+      `${REACT_APP_BACK_SERVER}/countries/${id}`
     );
     return dispatch({         
        type: GETCOUNTRYDETAIL,
@@ -57,7 +56,7 @@ export const getCountryDetail = (id) => {
 
 export const getActivitiesList = () => { 
   return async (dispatch) => {
-    const response = await axios.get("http://localhost:3001/activity"); 
+    const response = await axios.get(`${REACT_APP_BACK_SERVER}/activity`); 
     return dispatch({  
       type: GETACTIVITIES,
       payload: response.data,
@@ -69,7 +68,7 @@ export const allFilters = (payload) => {
   if (payload.countrySearch !== "") { 
     return async (dispatch) => {
       const response = await axios.get(
-        `http://localhost:3001/countries?name=${payload.countrySearch}` 
+        `${REACT_APP_BACK_SERVER}/countries?name=${payload.countrySearch}` 
       );
       return dispatch({
         type: ALLFILTERS,
