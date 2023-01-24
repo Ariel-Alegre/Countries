@@ -1,4 +1,4 @@
- .pageNav {
+.pageNav {
   display: flex;
   align-content: center;
   justify-content: center;
@@ -23,6 +23,6 @@
   background-color: rgba(20, 58, 20, 0.265);
 }
 
-.btnPage{
+.btnPage {
   background-color: rgba(2, 3, 3, 0.282);
 }

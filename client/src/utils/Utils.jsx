@@ -1,9 +1,9 @@
 const sortedCountries = (sort, countries) => {
-  let sorted; 
-  if (sort === "Orden") { 
-    sorted = countries;  
+  let sorted;
+  if (sort === "Orden") {
+    sorted = countries;
   } else {
-    if (sort === "ascendName") {   
+    if (sort === "ascendName") {
       sorted = countries.sort((a, b) => {
         if (a.name > b.name) {
           return 1;

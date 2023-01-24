@@ -15,9 +15,9 @@ function SelectDifficulty({ handleChangeIntegrated }) {
       <label>Difficulty: </label>
       {difficultyRange.map((element) => {
         return (
-          <label key = {'selectDiffLabel'+element}>
+          <label key={"selectDiffLabel" + element}>
             <input
-            key = {'selectDiff'+element}
+              key={"selectDiff" + element}
               type="radio"
               id={element}
               name="difficulty"
@@ -30,6 +30,6 @@ function SelectDifficulty({ handleChangeIntegrated }) {
       })}
     </div>
   );
-};
+}
 
 export default SelectDifficulty;

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './ActivitySeasons.module.css';
+import styles from "./ActivitySeasons.module.css";
 
 const ActivitySeasons = ({ seasons }) => {
   return (
@@ -7,9 +7,7 @@ const ActivitySeasons = ({ seasons }) => {
       <span>Temporadas:</span>
       {seasons &&
         seasons.map((season, index) => {
-          return (
-              <span key= {season.name + index}>{season.name}</span>
-          );
+          return <span key={season.name + index}>{season.name}</span>;
         })}
     </div>
   );

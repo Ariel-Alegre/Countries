@@ -5,10 +5,10 @@ module.exports = (sequelize) => {
     "season",
     {
       name: {
-        type: DataTypes.STRING,  
-        allowNull: false,        
+        type: DataTypes.STRING,
+        allowNull: false,
       },
     },
-    { timestamps: false } 
-  )   
+    { timestamps: false }
+  )
 };

@@ -1,12 +1,11 @@
 import React from "react";
-import {useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import styles from "./ActivityFilter.module.css";
 
 const ActivityFilter = ({ setCurrentPage, setFilterState, filterState }) => {
-
-const allActivities = useSelector((state) => state.activitiesNamesId);
-const handleFilterActivity = (event) => {
-    setFilterState({...filterState, activity:event.target.value})
+  const allActivities = useSelector((state) => state.activitiesNamesId);
+  const handleFilterActivity = (event) => {
+    setFilterState({ ...filterState, activity: event.target.value });
     setCurrentPage(1);
     event.preventDefault();
   };
@@ -14,9 +13,10 @@ const handleFilterActivity = (event) => {
   return (
     <div className={styles.activityFilterList}>
       <div className={styles.selectActivity}>
-        <select 
-        className={styles.size}
-        onChange={(e) => handleFilterActivity(e)}>
+        <select
+          className={styles.size}
+          onChange={(e) => handleFilterActivity(e)}
+        >
           <option key={"activityFilter All"} value="All">
             All Countries
           </option>

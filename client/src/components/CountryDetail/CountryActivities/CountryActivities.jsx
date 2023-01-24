@@ -1,10 +1,9 @@
 import React from "react";
 import ActivitySeasons from "../ActivitySeasons/ActivitySeasons";
 
-import styles from './CountryActivities.module.css'
+import styles from "./CountryActivities.module.css";
 
-const CountryActivities = ({activities}) => {
-  
+const CountryActivities = ({ activities }) => {
   return (
     <div className={styles.countryActivitiesList}>
       {activities &&
@@ -14,7 +13,7 @@ const CountryActivities = ({activities}) => {
               <span>Activity: {activity.name}</span>
               <span>Difficulty: {activity.difficulty}</span>
               <span>Duratión: {activity.duration} hs.</span>
-              <ActivitySeasons seasons = {activity.seasons}/>
+              <ActivitySeasons seasons={activity.seasons} />
             </div>
           );
         })}

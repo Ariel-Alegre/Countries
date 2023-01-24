@@ -1,21 +1,21 @@
-.searchButton{
-    margin-top: 15px;
-    margin-left: -30px;
-    position: absolute;
-    background: transparent;
-    border: none;
-    border-radius: 5px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    cursor: pointer;
+.searchButton {
+  margin-top: 15px;
+  margin-left: -30px;
+  position: absolute;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  cursor: pointer;
 }
 
-.searchInput{
-    margin-top: 10px;
-    font-size: 1.2rem;
-    border-radius: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.searchInput {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .btn {
-    font-size: 1rem;
+  font-size: 1rem;
 }

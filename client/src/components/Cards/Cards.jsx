@@ -2,7 +2,6 @@ import React from "react";
 import CountryCard from "../Card/Card";
 import styles from "./Cards.module.css";
 
-
 const CountriesCards = ({ currentCountries }) => {
   return (
     <div className={styles.container}>

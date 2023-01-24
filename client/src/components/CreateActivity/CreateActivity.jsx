@@ -8,10 +8,10 @@ import SearchCountryActivity from "./SearchCountryActivity/SearchCountryActivity
 import SelectDifficulty from "./SelectDifficulty/SelectDifficulty";
 import SelectSeason from "./SelectSeason/SelectSeason";
 import ErrorsList from "./ActivityErrors/ActivityErrors";
-import {AiFillHome} from 'react-icons/ai';
+import { AiFillHome } from "react-icons/ai";
 import styles from "./CreateActivity.module.css";
 
-function validate(input){
+function validate(input) {
   let errors = [];
   if (!input.name) {
     errors = [...errors, "Se requiere un nombre"];
@@ -30,7 +30,7 @@ function validate(input){
   }
 
   return errors;
-};
+}
 
 const buttonValidate = (errors) => {
   if (Object.keys(errors).length === 0) {
@@ -68,7 +68,6 @@ const CreateActivity = () => {
   useEffect(() => {
     setErrors(validate(input));
   }, [input]);
-
 
   useEffect(() => {
     setHabilButton(buttonValidate(errors));
@@ -167,7 +166,9 @@ const CreateActivity = () => {
     <div className={styles.contentBox}>
       <div className={styles.activityTitleBox}>
         <Link to="/home">
-          <button className={styles.btn}><AiFillHome/></button>
+          <button className={styles.btn}>
+            <AiFillHome />
+          </button>
         </Link>
         <h1>Create activity</h1>
       </div>
@@ -182,7 +183,7 @@ const CreateActivity = () => {
               <div>
                 <label>Name: </label>
                 <input
-                className={styles.input}
+                  className={styles.input}
                   type="text"
                   name="name"
                   autoComplete="off"
@@ -194,7 +195,7 @@ const CreateActivity = () => {
               <div>
                 <label>Duration: </label>
                 <input
-                className={styles.input2}
+                  className={styles.input2}
                   type="number"
                   name="duration"
                   autoComplete="off"

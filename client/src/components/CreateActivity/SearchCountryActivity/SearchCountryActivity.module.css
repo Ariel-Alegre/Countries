@@ -1,9 +1,9 @@
-.searchBar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    flex-shrink: 0;
+.searchBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
 }
 
 .countriesListBtn {
@@ -14,28 +14,26 @@
   flex-shrink: 0;
 }
 
-.countriesListBtn button{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
-  }
+.countriesListBtn button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
 
 .input {
-   font-size: 1.4rem;
-   border: none;
-   border-radius: 10px;
-  }
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 10px;
+}
 
 .inputTitle {
   font-size: 1.2rem;
-
 }
 
-.imgflag{
+.imgflag {
   width: 15px;
   height: 15px;
 }
-  

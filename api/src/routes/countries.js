@@ -11,31 +11,31 @@ router.use(express.json());
 
 router.get("/", async (req, res) => {
   try {
-    let { name } = req.query;       
-    if (name === "" || name === undefined) { 
-      let data = await Country.findAll({   
+    let { name } = req.query;
+    if (name === "" || name === undefined) {
+      let data = await Country.findAll({
         include: [{ model: Activity }],
       });
       res.json(data);
-    } else if (name) { 
-      const country = await Country.findAll({  
-        where: sequelize.where(                  
-          sequelize.fn("unaccent", sequelize.col("country.name")),  
+    } else if (name) {
+      const country = await Country.findAll({
+        where: sequelize.where(
+          sequelize.fn("unaccent", sequelize.col("country.name")),
           {
             [Op.iLike]:
               name
-                .normalize("NFD")                
-                .replace(/[\u0300-\u036f]/g, "")   
-                .toLowerCase() + "%"             
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .toLowerCase() + "%"
           }
         ),
-        include: [{ model: Activity }], 
+        include: [{ model: Activity }],
       });
 
-      if (country.length !== 0) {   
+      if (country.length !== 0) {
         res.json(country);
       } else {
-        res.json([]);         
+        res.json([]);
       }
     }
   } catch (error) {
@@ -47,10 +47,10 @@ router.get("/:id", async (req, res) => {
   const { id } = req.params;
   try {
     let paises = await Country.findOne({
-      where: {id:id},
-      include: [{ model: Activity, include: [{ model: Season }]}],
+      where: { id: id },
+      include: [{ model: Activity, include: [{ model: Season }] }],
     })
-    if (paises !== null) { 
+    if (paises !== null) {
       res.json(paises);
     } else {
       res.json("País no encontrado");

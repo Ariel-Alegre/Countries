@@ -1,10 +1,9 @@
 import React from "react";
 import styles from "./Paged.module.css";
 
-function Paged ({ countriesPerPage, allCountries, paged, currentPage }){
+function Paged({ countriesPerPage, allCountries, paged, currentPage }) {
   let pageNumbers = [];
   if (Array.isArray(allCountries)) {
-
     for (
       let i = 1;
       i <= Math.ceil((allCountries.length - 9) / (countriesPerPage + 1)) + 1;
@@ -16,7 +15,6 @@ function Paged ({ countriesPerPage, allCountries, paged, currentPage }){
     pageNumbers = [1];
   }
 
-  
   if (pageNumbers.length > 1) {
     return (
       <div className={styles.pageNav}>
@@ -27,8 +25,8 @@ function Paged ({ countriesPerPage, allCountries, paged, currentPage }){
               onClick={() => {
                 paged(num);
               }}
-              value = {num}
-              className = {currentPage === num? styles.btnPage:''}
+              value={num}
+              className={currentPage === num ? styles.btnPage : ""}
             >
               {" "}
               {num}{" "}
@@ -39,6 +37,6 @@ function Paged ({ countriesPerPage, allCountries, paged, currentPage }){
   } else {
     return <div></div>;
   }
-};
+}
 
 export default Paged;

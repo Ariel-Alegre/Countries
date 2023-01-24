@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import styles from './SearchCountryActivity.module.css';
+import styles from "./SearchCountryActivity.module.css";
 
 function SearchCountryActivity({ handleSelectCountries }) {
   const countries = useSelector((state) => state.allCountries);
@@ -26,22 +26,20 @@ function SearchCountryActivity({ handleSelectCountries }) {
       return (
         <div className={styles.countriesListBtn}>
           {filteredCountries.map((element) => (
-           
-              <button
-                onClick={(e) => handleSelectCountries(e)}
-                value={element.name}
-                name={element.imgflag}
-                id={element.id}
-                key={element.id}
-              >
-                <img
-                  src={element.imgflag}
-                  alt="Img not found"
-                  className={styles.imgflag}
-                />{" "}
-                {element.name}
-              </button>
- 
+            <button
+              onClick={(e) => handleSelectCountries(e)}
+              value={element.name}
+              name={element.imgflag}
+              id={element.id}
+              key={element.id}
+            >
+              <img
+                src={element.imgflag}
+                alt="Img not found"
+                className={styles.imgflag}
+              />{" "}
+              {element.name}
+            </button>
           ))}
         </div>
       );
@@ -55,17 +53,16 @@ function SearchCountryActivity({ handleSelectCountries }) {
       </div>
       <div>
         <input
-        className={styles.input}
+          className={styles.input}
           type="search"
-          id='SearchInput'
+          id="SearchInput"
           placeholder="Buscar países.."
           onChange={handleChange}
         />
-      {searchList()}
+        {searchList()}
       </div>
     </section>
-   
   );
-};
+}
 
 export default SearchCountryActivity;

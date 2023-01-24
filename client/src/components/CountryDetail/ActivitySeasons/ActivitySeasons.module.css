@@ -1,6 +1,5 @@
-.seasonsList{
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-
+.seasonsList {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
 }
