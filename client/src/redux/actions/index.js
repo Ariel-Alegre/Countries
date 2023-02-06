@@ -13,7 +13,7 @@ const { REACT_APP_BACK_SERVER } = process.env
 export function getByName(name) {
   return async function (dispatch) {
     try {
-      const json = await axios.get(`${REACT_APP_BACK_SERVER}/countries?name=` + name);
+      const json = await axios.get(`${REACT_APP_BACK_SERVER}/countries?name=`+ name);
       return dispatch({
         type: 'GET_BY_NAME',
         payload: json.data
