@@ -1,4 +1,6 @@
 import axios from "axios";
+const { REACT_APP_BACK_SERVER } = process.env
+
 export const GETALLCOUNTRIES = "GET_ALL_COUNTRIES";
 export const POSTACTIVITY = "POST_ACTIVITY";
 export const GETCOUNTRYDETAIL = "GET_COUNTRY_DETAIL";
@@ -9,7 +11,6 @@ export const FILTER_CONTINENT = "FILTER_CONTINENT";
 
 
 
-const { REACT_APP_BACK_SERVER } = process.env
 export function getByName(name) {
   return async function (dispatch) {
     try {
