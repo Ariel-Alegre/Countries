@@ -10,7 +10,6 @@ export const GET_BY_NAME = 'GET_BY_NAME';
 export const FILTER_CONTINENT = "FILTER_CONTINENT";
 
 
-
 export function getByName(name) {
   return async function (dispatch) {
     try {
