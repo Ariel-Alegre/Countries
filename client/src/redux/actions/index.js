@@ -1,4 +1,5 @@
 import axios from "axios";
+
 const { REACT_APP_BACK_SERVER } = process.env
 
 export const GETALLCOUNTRIES = "GET_ALL_COUNTRIES";
@@ -13,7 +14,7 @@ export const FILTER_CONTINENT = "FILTER_CONTINENT";
 export function getByName(name) {
   return async function (dispatch) {
     try {
-      const json = await axios.get(`${REACT_APP_BACK_SERVER}/countries?name=`+ name);
+      const json = await axios.get(`${REACT_APP_BACK_SERVER}/countries?name=` + name);
       return dispatch({
         type: 'GET_BY_NAME',
         payload: json.data
@@ -86,5 +87,5 @@ export function filterByContinent(payload) {
   return {
     type: FILTER_CONTINENT,
     payload
-  };
+  }
 };
