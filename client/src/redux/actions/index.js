@@ -14,7 +14,7 @@ export const FILTER_CONTINENT = "FILTER_CONTINENT";
 export function getByName(name) {
   return async function (dispatch) {
     try {
-      const json = await axios.get(`https://countries-production-5bc3.up.railway.app/countries?name=` + name);
+      const json = await axios.get(`https://countries-production-913a.up.railway.app/countries?name=` + name);
       return dispatch({
         type: 'GET_BY_NAME',
         payload: json.data
@@ -26,7 +26,7 @@ export function getByName(name) {
 };
 export const getCountries = () => {
   return async (dispatch) => {
-    let allCountries = await axios.get(`https://countries-production-5bc3.up.railway.app/countries`);
+    let allCountries = await axios.get(`https://countries-production-913a.up.railway.app/countries`);
     return dispatch({
       type: GETALLCOUNTRIES,
       payload: allCountries.data,
@@ -37,7 +37,7 @@ export const getCountries = () => {
 export const postActivity = (payload) => {
   return async (dispatch) => {
     const response = await axios.post(
-      `https://countries-production-5bc3.up.railway.app/activity`, payload
+      `https://countries-production-913a.up.railway.app/activity`, payload
     );
     return response.data;
   };
@@ -46,7 +46,7 @@ export const postActivity = (payload) => {
 export const getCountryDetail = (id) => {
   return async (dispatch) => {
     const response = await axios.get(
-      `https://countries-production-5bc3.up.railway.app/countries/${id}`
+      `https://countries-production-913a.up.railway.app/countries/${id}`
     );
     return dispatch({
       type: GETCOUNTRYDETAIL,
@@ -57,7 +57,7 @@ export const getCountryDetail = (id) => {
 
 export const getActivitiesList = () => {
   return async (dispatch) => {
-    const response = await axios.get(`https://countries-production-5bc3.up.railway.app/activity`);
+    const response = await axios.get(`https://countries-production-913a.up.railway.app/activity`);
     return dispatch({
       type: GETACTIVITIES,
       payload: response.data,
@@ -69,7 +69,7 @@ export const allFilters = (payload) => {
   if (payload.countrySearch !== "") {
     return async (dispatch) => {
       const response = await axios.get(
-        `https://countries-production-5bc3.up.railway.app/countries?name=${payload.countrySearch}`
+        `https://countries-production-913a.up.railway.app/countries?name=${payload.countrySearch}`
       );
       return dispatch({
         type: ALLFILTERS,
